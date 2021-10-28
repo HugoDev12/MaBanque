@@ -1,0 +1,24 @@
+
+{
+    "Société générale" : 
+    { 
+    "Taux d'intérêt Sg" : "1.10%",
+    "Taux d'intérêt Bnp" : "1.32%",
+    "Taux d'intérêt Ca" : "1.15%"
+    },
+
+    "BNP paribas" : 
+    {
+    "Frais de dossier Sg" : "300€",
+    "Frais de dossier Bnp" : "500€",    
+    "Frais de dossier Ca" : "1200€"
+    },
+
+    "Crédit agricole" : 
+    {
+    "Assurance Bancaire Sg" : "7300€",
+    "Assurance Bancaire Bnp" : "8100€",   
+    "Assurance Bancaire Ca" : "9000€"
+    }
+
+}
