@@ -17,39 +17,30 @@ function getTab(banksData) {
 
     let table = document.querySelector("table");
 
-
-
     let tableHeader = document.createElement("tr");
+    tableHeader.setAttribute("id","firstRow");
     tableHeader.innerHTML = "<th>Banque</th>";
     let firstRow = Object.keys(Object.entries(banksData)[0][1]);
-    getBanksValues(table, tableHeader, firstRow);
+    getBanksValues(table, tableHeader, firstRow); // first row of table
 
 
     let interest = document.createElement("tr");
     interest.innerHTML = "<th>Société Générale</th>";
     let sgBank = Object.values(Object.entries(banksData)[0][1]);
-    getBanksValues(table, interest, sgBank);
+    getBanksValues(table, interest, sgBank); // second row
 
 
     
     let folderCost = document.createElement("tr");
     folderCost.innerHTML = "<th>BNP Paribas</th>";
     let bnpBank = Object.values(Object.entries(banksData)[1][1]);
-    getBanksValues(table, folderCost, bnpBank);
+    getBanksValues(table, folderCost, bnpBank); // third row
 
 
     let insuranceCost = document.createElement("tr");
     insuranceCost.innerHTML = "<th>Crédit Agricole</th>";
     let caBank = Object.values(Object.entries(banksData)[2][1]);
-    getBanksValues(table, insuranceCost, caBank);
-
-
-
-
-    
-
-    
-
+    getBanksValues(table, insuranceCost, caBank); // last row
 
 }
 

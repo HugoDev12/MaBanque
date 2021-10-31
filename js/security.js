@@ -3,12 +3,12 @@ httpRequest.onreadystatechange = function() {
     if(httpRequest.readyState === XMLHttpRequest.DONE){
         if(httpRequest.status === 200){  
             let securityAlert = JSON.parse(httpRequest.responseText); 
-                window.addEventListener("load", securityText(securityAlert)); // Evenement au chargement de la page                         
+                window.addEventListener("load", securityText(securityAlert)); // Event on loading's page                         
         } else {console.log("une erreur est survenue");}
     } else {console.log("chargement en cours");}
 }
 
-httpRequest.open("GET", "datas (js and json)/security.json"); // récupérer le contenu à afficher dans un fichier JSON
+httpRequest.open("GET", "datas (js and json)/security.json"); // Get the content to display from json file
 httpRequest.send();
 
 
@@ -18,7 +18,7 @@ function securityText(securityAlert){
     let layer = document.createElement("div");
     layer.setAttribute("id", "onload");
     layer.classList.add("d-flex","align-items-center","justify-content-center");
-    layer.innerHTML =           // Contenu HTML avec classes Bootstrap et texte venant de JSON 
+    layer.innerHTML =           // inner HTML with bootstrap classes with json file content
          `                      
             <section class="d-flex flex-column" id="blockAlert">
                 <h2 class="text-center","mb-4">${securityAlert.title}</h2>
@@ -30,7 +30,7 @@ function securityText(securityAlert){
         `;
     document.body.appendChild(layer);
     
-    // Evenement au click du boutton
+    // Event on button's click
     document.getElementById("toClose").addEventListener("click", function () {
         document.querySelector("body").removeChild(layer);
     })
