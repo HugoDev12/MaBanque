@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title></title>
+  <title>MaBanque.fr</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="manifest" href="site.webmanifest">
@@ -14,102 +14,84 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/mabanque.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
 
   <meta name="theme-color" content="#fafafa">
 </head>
 
 <body>
 <!-- ########################################    Header    ################################## -->
-  <div class="container">
-    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
-      <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
-        <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
-      </a>
-
-      <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-        <li><a href="index.html" class="nav-link px-2 link-secondary">Home</a></li>
-      </ul>
-
-      <div class="col-md-3 text-end">
-        <button type="button" class="btn btn-outline-primary me-2">Login</button>
-        <button type="button" class="btn btn-primary">Sign-up</button>
+  <div class="container-fluid">
+    <header class="d-flex flex-column align-items-center justify-content-center flex-md-column-reverse" id="title">
+      <div id="headerTitle">
+        <h1>GestioBanque</h1>
+      </div>
+      <div class="align-self-md-end" id="headerBtn">
+        <button type="button" class="btn btn-outline-secondary me-2">Login</button>
+        <button type="button" class="btn btn-secondary">Sign-up</button>
       </div>
     </header>
   </div>
 <!-- ########################################   Nav   ######################################### -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarScroll">
-        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid d-flex">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarScroll" >
+      <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Accueil</a>
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="statistiques.html">Statistiques</a>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="blog.html" id="navbarScrollingDropdown">
+          <li class="nav-item">
+            <a class="nav-link" href="blog.html" id="navbarScrollingDropdown">
               Blog
             </a>
-            <!-- <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul> -->
           </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Link</a>
-          </li>
-        </ul>
-        <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
-      </div>
+      </ul>
+      <form class="d-flex" id="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn" type="submit"><i class="bi bi-search"></i></button>
+      </form>
     </div>
-  </nav>
+  </div>
+</nav>
 <!-- ####################################   Main    ################################################### -->
-<main class="container-fluid d-flex flex-column flex-lg-row justify-content-lg-around row">
-  <article class="border my-4 mx-2 text-center col-md-4 justify-content-center align-self-md-end col-lg-3">
-    <header>BNP Paribas</header>
+<main class="container-fluid d-flex flex-column flex-lg-row justify-content-lg-around mt-5" id="homeMain">
+  <article class="border my-4 mx-2 text-center col-md-4 justify-content-center align-self-md-end align-self-lg-center col-lg-3">
+    <h2>BNP Paribas</h2>
     <p>Montant</p>
     <button type="button" class="btn btn-outline-info btn-card">Détails</button>
     <div>détails à afficher</div>
   </article>
-  <article class="border my-4 mx-2 text-center col-md-4 justify-content-center col-lg-3">
-    <header>Société générale/header>
+  <article class="border my-4 mx-2 text-center col-md-4 justify-content-center align-self-lg-center col-lg-3">
+    <h3>Société générale</h3>
     <p>Montant</p>
     <button type="button" class="btn btn-outline-info btn-card">Détails</button>
     <div>détails à afficher</div>
   </article>
-  <article class="border my-4 mx-2 text-center col-md-4 justify-content-center align-self-md-end col-lg-3">
-    <header>Crédit agricole</header>
+  <article class="border my-4 mx-2 text-center col-md-4 justify-content-center align-self-md-end align-self-lg-center col-lg-3">
+    <h2>Crédit agricole</h2>
     <p>Montant</p>
     <button type="button" class="btn btn-outline-info btn-card">Détails</button>
     <div>détails à afficher</div>
   </article>
 </main>
-
-  
 <!-- ####################################   Footer    ################################################# -->
-  <footer class="py-3 my-4">
-    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
-    </ul>
-    <p class="text-center text-muted">© 2021 Company, Inc</p>
-  </footer>
-
+<footer class="container-fluid d-flex flex-column align-items-center py-3 mt-5 border-top">
+  <a href="#">About</a>
+  <p>© 2021 Company, Inc</p>
+</footer>
+<!-- ###################################    Scripts   ################################################# -->
   <!-- Add your site or application content here -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
-  <script src="datas (js and json)/security.js"></script>
+  <script src="js/security.js"></script>
 
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script>
