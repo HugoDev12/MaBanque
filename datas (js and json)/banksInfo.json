@@ -2,23 +2,22 @@
 {
     "Société générale" : 
     { 
-    "Taux d'intérêt Sg" : "1.10%",
-    "Taux d'intérêt Bnp" : "1.32%",
-    "Taux d'intérêt Ca" : "1.15%"
+    "Taux d'intérêt" : "1.10%",
+    "Frais de dossier" : "300€",
+    "Assurance Bancaire" : "7300€"
     },
 
     "BNP paribas" : 
     {
-    "Frais de dossier Sg" : "300€",
-    "Frais de dossier Bnp" : "500€",    
-    "Frais de dossier Ca" : "1200€"
+    "Taux d'intérêt" : "1.32%",
+    "Frais de dossier" : "500€",    
+    "Assurance Bancaire" : "8100€"
     },
 
     "Crédit agricole" : 
     {
-    "Assurance Bancaire Sg" : "7300€",
-    "Assurance Bancaire Bnp" : "8100€",   
-    "Assurance Bancaire Ca" : "9000€"
+    "Taux d'intérêt" : "1.15%",
+    "Frais de dossier" : "1200€",   
+    "Assurance Bancaire" : "9000€"
     }
-
 }
