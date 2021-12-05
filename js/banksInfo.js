@@ -1,9 +1,34 @@
+
+function makeTabHeader(table, banksData) {
+    let tableHeader = document.createElement("tr");
+    tableHeader.setAttribute("id","firstRow");
+    let keys = Object.keys(banksData["Société générale"]);
+    for(let value of keys) {
+        tableHeader.innerHTML += "<th>" + value +"</th>";
+    }
+    table.append(tableHeader);  
+}
+
+function makeTableRow (table, bank){
+    row = document.createElement("tr");
+    // Make the cells
+    for (let key in bank){
+        row.innerHTML += `<td>${bank[key]}</td>`
+    }
+    table.append(row);    
+}
+
 let httpRequest = new XMLHttpRequest();
 httpRequest.onreadystatechange = function() {
     if(httpRequest.readyState === XMLHttpRequest.DONE){
         if(httpRequest.status === 200){  
             let banksData = JSON.parse(httpRequest.responseText);
-                window.addEventListener("load", getTab(banksData));
+            let table = document.querySelector("table");
+            makeTabHeader(table, banksData);
+            for(let key in banksData) {
+                makeTableRow(table, banksData[key]);
+            }
+
         } else {console.log("une erreur est survenue");}
     } else {console.log("chargement en cours");}
 }
@@ -13,46 +38,19 @@ httpRequest.send();
 
 
 
-function getTab(banksData) {
-
-    let table = document.querySelector("table");
-
-    let tableHeader = document.createElement("tr");
-    tableHeader.setAttribute("id","firstRow");
-    tableHeader.innerHTML = "<th>Banque</th>";
-    let firstRow = Object.keys(Object.entries(banksData)[0][1]);
-    getBanksValues(table, tableHeader, firstRow); // first row of table
-
-
-    let interest = document.createElement("tr");
-    interest.innerHTML = "<th>Société Générale</th>";
-    let sgBank = Object.values(Object.entries(banksData)[0][1]);
-    getBanksValues(table, interest, sgBank); // second row
-
-
-    
-    let folderCost = document.createElement("tr");
-    folderCost.innerHTML = "<th>BNP Paribas</th>";
-    let bnpBank = Object.values(Object.entries(banksData)[1][1]);
-    getBanksValues(table, folderCost, bnpBank); // third row
-
-
-    let insuranceCost = document.createElement("tr");
-    insuranceCost.innerHTML = "<th>Crédit Agricole</th>";
-    let caBank = Object.values(Object.entries(banksData)[2][1]);
-    getBanksValues(table, insuranceCost, caBank); // last row
-
-}
-
-
-function getBanksValues (table, getRow ,bankValues){
-    for (let datas in bankValues){
-        getRow.innerHTML += `<td>${bankValues[datas]}</td>`
-    }
-    table.append(getRow);
-    return table;
-}
-
-
-
-
+// ########################################################################     Another method, (better)     ##################################################################  //
+// // Generate each lines in the table, one line per json object
+// function makeTableRows(stat) {
+//     let table = document.getElementById("statTable");
+//     // For each json object in stat
+//     for(const data of stat) {
+//       // Add a row to the table
+//       let row = table.insertRow(-1);
+//       // For each property in the current JSON object
+//       for(prop in data) {
+//         // Add a cell in the row with the value of the property as text
+//         let cell = row.insertCell(-1);
+//         cell.innerText = data[prop];
+//       }
+//     }
+//   }
