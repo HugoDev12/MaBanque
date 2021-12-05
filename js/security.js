@@ -28,10 +28,11 @@ function securityText(securityAlert){
                 </button>
             </section>  
         `;
-    document.body.appendChild(layer);
+    !sessionStorage.getItem("layerClick") && document.body.appendChild(layer);
     
     // Event on button's click
     document.getElementById("toClose").addEventListener("click", function () {
+        sessionStorage.setItem("layerClick", true);
         document.querySelector("body").removeChild(layer);
     })
 }

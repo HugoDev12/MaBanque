@@ -1,7 +1,8 @@
 
 {
     "Société générale" : 
-    { 
+    {
+    "Banque" : "Société générale", 
     "Taux d'intérêt" : "1.10%",
     "Frais de dossier" : "300€",
     "Assurance Bancaire" : "7300€"
@@ -9,6 +10,7 @@
 
     "BNP paribas" : 
     {
+    "Banque" : "BPN Paribas",
     "Taux d'intérêt" : "1.32%",
     "Frais de dossier" : "500€",    
     "Assurance Bancaire" : "8100€"
@@ -16,6 +18,7 @@
 
     "Crédit agricole" : 
     {
+    "Banque" : "Crédit agricole",
     "Taux d'intérêt" : "1.15%",
     "Frais de dossier" : "1200€",   
     "Assurance Bancaire" : "9000€"

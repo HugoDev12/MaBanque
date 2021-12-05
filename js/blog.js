@@ -1,5 +1,5 @@
 
-let main = document.querySelector("main");
+let main = document.getElementById("blogMain");
 main.classList.add("container-fluid", "d-flex", "flex-wrap","justify-content-center","justify-content-lg-evenly");
 
 fetch("https://oc-jswebsrv.herokuapp.com/api/articles")

@@ -6,10 +6,6 @@ body>div {
     background-color:#DDEFF8;
 }
 
-body>div>header {
-    height: 30vh;
-}
-
 footer {
     background-color: #5F7481;
     color: white;
@@ -24,9 +20,17 @@ footer a {
 .btn-card{
     width: auto;
 }
+
+header {
+    height: 25vh;
+} 
+
+footer {
+    height: 10vh;
+}
   
 /* --------------------------------------------     Home's page  ----------------------------------------------*/
-#onload {
+#onload, #Account {
     height: 100vh;
     width: 100vw;
     background-color: rgb(184, 175, 175, 0.4);
@@ -35,11 +39,24 @@ footer a {
     top: 0;
 }
 
-#blockAlert {
+#blockAlert, #Form {
     background-color:white;
     padding: 1rem;
     margin: 1rem;
 }
+
+/* #closeBtn {
+    margin-right: 0;
+} */
+
+/* label {
+    margin-left: 5em;
+} */
+
+#homeMain>article {
+    height: 8em;
+}
+
 
 /* --------------------------------------------------   Blog    ----------------------------------------------------------- */
 
@@ -48,6 +65,10 @@ footer a {
     border-radius: 8%;
     width: 15rem;
     margin: 1em;
+}
+
+#blogMain>.articleCards>h2{
+    font-size: medium;
 }
 
 
@@ -86,6 +107,21 @@ tr {
 /* ---------------------------------------------------  Media Queries   ----------------------------------------------------- */
 @media screen and (min-width: 768px){
 
+    #Form {
+        width: 70%;
+    }
+
+    #formContent {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form-label {
+        /* margin left */
+    }
+
     #headerTitle {
        height: 20vh;
    }
@@ -105,14 +141,15 @@ tr {
 }
 
 @media screen and (min-width: 992px){
-    #homeMain {
-        height: 45vh;
-    }
+
     #blogMain{
         height: 50vh;
     }
     #blogMain>.articleCards{
         height: 50%;
         align-self: center;
+    }
+    #homeMain>article {
+        height: 12em;
     }
 }
