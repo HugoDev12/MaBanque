@@ -1,6 +1,5 @@
 
-$("#Open").click(function(e){
-    e.stopPropagation();
+$("#Open").click(function(){
 
     let accountLayer = $('<div></div>').attr('id','Account').addClass('d-flex justify-content-center align-items-center flex-column')
     .append(`
@@ -36,7 +35,15 @@ $("#Open").click(function(e){
         </div>
     `);
 
+
+    
+
     $('main').append(accountLayer);
+
+    // $("#closeBtn").click(function(){
+    //     console.log("test");
+    //     $('main').remove(accountLayer);  ici
+    // })
 })
 
 

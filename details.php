@@ -14,8 +14,8 @@
 
 <section class="container d-flex flex-column justify-content-center align-items-center mt-5">
    <h2 class="mb-5">Détails du compte</h2>
-   <ul class="list-group">
 
+   <ul class="list-group">
    <?php 
    $accounts = get_accounts();
    foreach($accounts[$id] as $key => $value) {
@@ -23,8 +23,8 @@
       
    }
    ?>
-   
    </ul>
+   
    <a href="index.php" class="mt-5 btn btn-dark">Retour</a>
 </section>
 

@@ -1,6 +1,13 @@
 <?php
 function get_accounts() {
     return [
+[
+            'name' => 'La Poste',
+            'number' => '656598',
+            'owner' => 'Occelli Hugo',
+            'amount' => '750',
+            'last_operation' => '+50'
+            ],
       [
         "name" => "Compte courant",
         "number" => "N:0132520024 fr 45",

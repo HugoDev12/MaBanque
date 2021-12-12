@@ -22,7 +22,7 @@
 //     console.log("test");
 // })
 
-// $("#closeBtn").click(function(e){
-//     console.log("test");
-//     $('main').remove(accountLayer);
-// })
+$("#closeBtn").click(function(e){
+    console.log("test");
+    // $('main').remove(accountLayer);
+})

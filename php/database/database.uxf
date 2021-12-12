@@ -1,0 +1,32 @@
+<diagram program="umletino" version="14.4.0-SNAPSHOT"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>48</x><y>130</y><w>210</w><h>190</h></coordinates><panel_attributes>User
+--
+
+
+
+- ID (PK INT auto_increment)
+- user_Mail (varchar)
+- user_PW (varchar)
+- login_creation (date)
+- user_name (varchar)
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>398</x><y>130</y><w>210</w><h>190</h></coordinates><panel_attributes>Account
+--
+
+
+
+- ID (PK int auto_increment)
+- account_name (varchar)
+- account_number (varchar)
+- account_amount (float)
+- userID (FK)
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>248</x><y>220</y><w>170</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>150;10;10;10</additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>258</x><y>230</y><w>40</w><h>40</h></coordinates><panel_attributes>1</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>688</x><y>200</y><w>40</w><h>40</h></coordinates><panel_attributes>N</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>728</x><y>130</y><w>220</w><h>190</h></coordinates><panel_attributes>Last_operation
+--
+
+
+
+
+- ID (PK int auto_increment)
+- amount (varchar)
+- accountID (FK)
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>598</x><y>220</y><w>150</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>130;10;10;10</additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>608</x><y>230</y><w>40</w><h>40</h></coordinates><panel_attributes>1</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>358</x><y>200</y><w>40</w><h>40</h></coordinates><panel_attributes>N</panel_attributes><additional_attributes></additional_attributes></element></diagram>
