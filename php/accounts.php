@@ -3,10 +3,10 @@ function get_accounts() {
     return [
 [
             'name' => 'La Poste',
-            'number' => '656598',
-            'owner' => 'Occelli Hugo',
-            'amount' => '750',
-            'last_operation' => '+50'
+            'number' => '59568',
+            'owner' => 'Mr.Occelli',
+            'amount' => '7500',
+            'last_operation' => 'dépôt +80'
             ],
       [
         "name" => "Compte courant",

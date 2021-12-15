@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!doctype html>
 <html class="no-js" lang="">
 
@@ -15,6 +16,7 @@
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/mabanque.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/fontawesome.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
   integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" 
   crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -23,12 +25,28 @@
 </head>
 
 <body>
-<header class="d-flex flex-column align-items-center justify-content-center flex-md-column-reverse" id="title">
-      <div id="headerTitle">
-        <h1>GestioBanque</h1>
-      </div>
-      <div class="align-self-md-end" id="headerBtn">
-        <button type="button" class="btn btn-outline-secondary me-2">Login</button>
-        <button type="button" class="btn btn-secondary">Sign-up</button>
-      </div>
-</header>
+<header class="d-flex flex-column align-items-center justify-content-between" id="title">
+
+<div id="headerTitle" class="d-flex align-items-end">
+    <h1>GestioBanque</h1>
+</div>
+
+<?php if(isset($_POST['submitUser'])) {
+  echo '<p>Bonjour '.$_SESSION["user"]. '</p>
+        <div class="align-self-end" class="headerBtn">
+          <a href="deconnect.php" class="btn btn-secondary">Déconnexion</a>
+        </div>';
+        
+        
+}
+?>
+
+<?php if (!isset($_POST['submitUser'])) {
+  echo  ' <div class="align-self-md-end" class="headerBtn">
+            <a href="login.php" class="btn btn-outline-secondary">Login</a>
+            <a href="sign-up.php" class="btn btn-secondary">Sign-up</a>
+          </div>';
+}
+?>
+
+<?php echo "</header>" ?>
