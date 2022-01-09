@@ -1,6 +1,7 @@
-<?php require("php/header.php")?>
-<?php require("php/nav.php")?>
-<div class="mt-5" id = "blogMain"></div>
-<?php require("php/footer.php")?>
-  <script src="./js/blog.js"></script>
-<?php require("php/closeIndex.php")?>
+<?php
+session_start();
+    require("vue/template/header.php");
+    require("vue/template/nav.php");
+    echo "<div class='mt-5' id = 'blogMain'></div>";
+    require("vue/template/footer.php");
+?>
