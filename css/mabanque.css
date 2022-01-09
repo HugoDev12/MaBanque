@@ -22,13 +22,22 @@ footer a {
 }
 
 header {
-    height: 25vh;
+    height: 20vh;
 } 
+
+/* #headerTitle {
+    height: 20vh;
+} */
 
 footer {
     height: 10vh;
 }
-  
+
+#toggle_pwd {
+    cursor: pointer;
+}
+
+
 /* --------------------------------------------     Home's page  ----------------------------------------------*/
 #onload, #Account {
     height: 100vh;
@@ -45,17 +54,13 @@ footer {
     margin: 1rem;
 }
 
-/* #closeBtn {
-    margin-right: 0;
-} */
-
-/* label {
-    margin-left: 5em;
-} */
-
 #homeMain>article {
     height: 8em;
 }
+
+/* #toggle_pwd {
+    
+} */
 
 
 /* --------------------------------------------------   Blog    ----------------------------------------------------------- */
@@ -118,17 +123,13 @@ tr {
         align-items: center;
     }
 
-    .form-label {
-        /* margin left */
-    }
-
     #headerTitle {
        height: 20vh;
    }
 
-   #headerBtn {
+   /* .headerBtn {
        height: 8vh;
-   }
+   } */
 
    #firstRow>td{
        font-size: inherit;

@@ -18,17 +18,15 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
   integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" 
   crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
   <meta name="theme-color" content="#fafafa">
 </head>
 
 <body>
-<header class="d-flex flex-column align-items-center justify-content-center flex-md-column-reverse" id="title">
-      <div id="headerTitle">
-        <h1>GestioBanque</h1>
-      </div>
-      <div class="align-self-md-end" id="headerBtn">
-        <button type="button" class="btn btn-outline-secondary me-2">Login</button>
-        <button type="button" class="btn btn-secondary">Sign-up</button>
-      </div>
+<header class="d-flex flex-column align-items-center justify-content-center" id="title">
+    <h1>GestioBanque</h1>
+    <?php if(isset($_SESSION) && isset($_SESSION["user"])): ?> problème sur condition de la session ici
+      <a href="./deconnect.php" class="btn btn-info">Log-out</a>
+    <?php else: ?>
+      <a href="./index.php" class="btn btn-info">Sign-up</a>
+    <?php endif ?>
 </header>

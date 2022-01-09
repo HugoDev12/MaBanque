@@ -21,4 +21,23 @@
   }
 }());
 
+
 // Place any jQuery/helper plugins in here.
+
+// navbar d flex toggle
+$("#navToggle").click(function() {
+  $("#navbarScroll").toggleClass("d-flex justify-content-center");
+});
+
+// login form password icon toggle hide/show input value.
+$("#pwdIcon").click(function(){
+  
+  $eye = "bi bi-eye-fill";
+  $slashEye = "bi bi-eye-slash-fill";
+
+  $(this).find(">:first-child").attr('class', (_, attr) => attr == $slashEye ? $eye : $slashEye);
+  $("#Password").attr('type', (_, attr) => attr == 'password' ? 'text' : 'password');
+  
+
+});
+

@@ -24,5 +24,5 @@
 
 // $("#closeBtn").click(function(e){
 //     console.log("test");
-//     $('main').remove(accountLayer);
+//     // $('main').remove(accountLayer);
 // })

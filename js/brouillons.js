@@ -105,3 +105,4 @@ function getTableRow (getRow, bankValues, bankName, bankIndex){
     bankValues = Object.values(Object.entries(banksData)[bankIndex][1]);
     return getBanksValues(table, getRow, bankValues);
 }
+
